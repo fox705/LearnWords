@@ -1,0 +1,14 @@
+CREATE TABLE translationmap
+(
+    id integer NOT NULL DEFAULT nextval('translationmap_id_seq'::regclass),
+    id_word integer,
+    id_word_child integer
+);
+
+CREATE TABLE word
+(
+    id integer NOT NULL DEFAULT nextval('word_id_seq'::regclass),
+    id_word integer,
+    name text COLLATE pg_catalog."default",
+    language text COLLATE pg_catalog."default"
+);
